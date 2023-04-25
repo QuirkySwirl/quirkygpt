@@ -12,18 +12,10 @@ export const SIDEBAR_ITEMS: any = [
         url: "/",
     },
     {
-        label: "Fork this repo",
-        url: "https://github.com/yuvalsuede/jasper-alternative-gpt",
-        target: "blank"
-    },
-    {
-        label: "Follow me on LinkedIn",
-        url: "https://www.linkedin.com/in/yuval-suede/",
-        target: "blank"
     },
     {
         label: "Contact",
-        url: "https://www.linkedin.com/in/yuval-suede/",
+        url: "https://twitter.com/QuirkySwirl",
         target: "blank"
     },
 ];
@@ -37,15 +29,15 @@ const Layout: React.FC<Props> = ({ children, title }) => {
     }
     return (
         <Fragment>
-            <div className="min-h-screen relative w-full md:flex md:flex-row">
-                <div className="md:hidden z-10 fixed left-0 top-0 h-full">
+            <div className="relative w-full min-h-screen md:flex md:flex-row">
+                <div className="fixed top-0 left-0 z-10 h-full md:hidden">
                     <Sidebar onShowPopup={handlePopup} items={SIDEBAR_ITEMS} />
                 </div>
                 <div className="hidden md:block md:relative ">
                     <Sidebar onShowPopup={handlePopup} items={SIDEBAR_ITEMS} />
                 </div>
                 <main className="w-full md:flex-grow">
-                    { title && <h1 className="text-black text-2xl font-bold mb-4 mt-10 pr-4 pl-4 pt-4">{title}</h1> }
+                    { title && <h1 className="pt-4 pl-4 pr-4 mt-10 mb-4 text-2xl font-bold text-black">{title}</h1> }
                     {children}
                 </main>
                 {showPopup && <GoProPopup onClose={() => setShowPopup(false)}/>}

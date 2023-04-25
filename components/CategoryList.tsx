@@ -7,17 +7,19 @@ interface Category {
 
 const categoriesData = [
     { id: "all", label: "All" },
-    { id: "blog", label: "Blog" },
-    { id: "linkedin", label: "LinkedIn" },
-    { id: "email", label: "Email" },
-    { id: "marketing", label: "Marketing" },
-    { id: "ecommerce", label: "Ecommerce" },
-    { id: "website", label: "Website" },
-    { id: "ads", label: "Ads" },
-    { id: "google", label: "Google" },
-    { id: "seo", label: "SEO" },
-    { id: "video", label: "Video" },
-    { id: "social-media", label: "Social Media" },
+    { id: "learning", label: "Learning" },
+    { id: "security", label: "Security" },
+    { id: "recipes", label: "Recipes" },
+    { id: "medical", label: "Medical" },
+    { id: "travel", label: "Travel" },
+    { id: "legal", label: "Legal" },
+    { id: "tech", label: "Tech" },
+    { id: "finance", label: "Finance" },
+    { id: "parenting", label: "Parenting" },
+    { id: "career", label: "Career" },
+    { id: "personal", label: "Personal" },
+    { id: "organization", label: "Organization" },
+    { id: "fitness", label: "Fitness" },
 ];
 
 // @ts-ignore
@@ -33,7 +35,7 @@ const CategoriesList = ({ onSelectedCategory }) => {
     };
 
     return (
-        <div className="flex flex-wrap gap-2 justify-start my-6">
+        <div className="flex flex-wrap justify-start gap-2 my-6">
             {categoriesData.map((category: Category) => (
                 <button
                     key={category.id}

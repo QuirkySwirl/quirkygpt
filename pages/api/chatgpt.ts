@@ -32,7 +32,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 model: "gpt-3.5-turbo",
                 // @ts-ignore
                 messages: messages,
-                temperature: 1,
+                temperature: 0.8,
+                max_tokens: 2000,
             });
 
             const reply = response?.data?.choices[0].message.content;

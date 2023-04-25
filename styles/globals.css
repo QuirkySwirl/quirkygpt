@@ -1,32 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 /* Background */
 .bg-primary {
-    background-color: #ffffff;
+    background-color: #f2fff8;
 }
 
 /* Primary color for active links */
 .text-primary {
-    color: #16a481;
+    color: #1c64f2;
 }
 .background-active {
-    color: #16a481;
+    color: #1c64f2;
 }
 
 /* Secondary color for inactive links */
 .text-secondary {
-    color: #6e6e80;
+    color: #8338ec;
+}
+
+/* Tertiary color */
+.text-tertiary {
+    color: #ff5a5f;
 }
 
 /* H1 text color */
 .text-heading {
-    color: #000000;
+    color: #0c4ea4;
 }
 
 /* H2 - H6 text color */
 .text-subheading {
-    color: #6e6e80;
+    color: #5f27ba;
 }
 
 /* Example usage */

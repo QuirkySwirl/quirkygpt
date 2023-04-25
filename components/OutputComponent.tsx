@@ -39,13 +39,13 @@ const OutputComponent: React.FC<OutputComponentProps> = ({generatedOutput, onCle
 
     return (
         <div className="w-full lg:w-1/2">
-            <div className="xl:sticky xl:z-10 top-0 flex items-center px-3 bg-white border-b border-gray-200">
+            <div className="top-0 flex items-center px-3 bg-white border-b border-gray-200 xl:sticky xl:z-10">
                 <nav className="flex flex-grow py-1 space-x-3" aria-label="Tabs">
                     <button
-                        className="relative transition-all duration-150 before:transition-all before:duration-150 before:absolute before:inset-0 whitespace-nowrap py-2 px-3 text-xs font-medium before:bg-gray-100 before:rounded-lg before:scale-100 before:opacity-100 text-blue-700">
+                        className="relative px-3 py-2 text-xs font-medium text-blue-700 transition-all duration-150 before:transition-all before:duration-150 before:absolute before:inset-0 whitespace-nowrap before:bg-gray-100 before:rounded-lg before:scale-100 before:opacity-100">
             <span className="relative">
               New outputs{" "}
-                <span className="px-2 py-1 ml-2 text-xs rounded-full bg-white">
+                <span className="px-2 py-1 ml-2 text-xs bg-white rounded-full">
                 {outputs.length}
               </span>
             </span>
@@ -55,7 +55,7 @@ const OutputComponent: React.FC<OutputComponentProps> = ({generatedOutput, onCle
                 <div>
                     <button
                         onClick={onClearOutput}
-                        className="relative transition-all duration-150 before:transition-all before:duration-150 before:absolute before:inset-0 px-3 py-2 text-xs font-medium leading-4 text-gray-400 hover:text-gray-600 before:bg-gray-100 before:rounded-lg before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100"
+                        className="relative px-3 py-2 text-xs font-medium leading-4 text-gray-400 transition-all duration-150 before:transition-all before:duration-150 before:absolute before:inset-0 hover:text-gray-600 before:bg-gray-100 before:rounded-lg before:scale-50 before:opacity-0 hover:before:scale-100 hover:before:opacity-100"
                     >
                         <span className="relative">Clear</span>
                     </button>
@@ -66,7 +66,7 @@ const OutputComponent: React.FC<OutputComponentProps> = ({generatedOutput, onCle
                     <>
                         {outputs.map((answer, index) => (
                             <div key={index}
-                                 className="py-3 px-3 border-b border-gray-200 group cursor-pointer bg-green-50 hover:bg-green-300/5">
+                                 className="px-3 py-3 border-b border-gray-200 cursor-pointer group bg-green-50 hover:bg-green-300/5">
                                 <div className="flex items-center space-x-2">
                                     {/* Your action buttons */}
                                 </div>
@@ -87,7 +87,7 @@ const OutputComponent: React.FC<OutputComponentProps> = ({generatedOutput, onCle
                     </>
                 ) : (
                     <div
-                        className="w-4/5 mx-auto mt-12 text-gray-900 bg-white border border-gray-200 p-4 rounded-md shadow-sm flex items-center justify-center">
+                        className="flex items-center justify-center w-4/5 p-4 mx-auto mt-12 text-gray-900 bg-white border border-gray-200 rounded-md shadow-sm">
                         <span className="text-lg font-normal text-gray-200">No output generated yet.</span>
                     </div>
 
