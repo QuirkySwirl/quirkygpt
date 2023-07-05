@@ -1,0 +1,10 @@
+runtime: nodejs18
+
+instance_class: F2
+
+manual_scaling:
+  instances: 1
+
+env_variables:
+  NODE_ENV: "production"
+  OPENAI_API_KEY=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

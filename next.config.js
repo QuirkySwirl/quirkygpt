@@ -19,3 +19,11 @@ module.exports = {
         OPENAI_API_KEY: process.env.OPENAI_API_KEY
     },
 };
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
+    output: 'export',
+  }
+  
+  module.exports = nextConfig
