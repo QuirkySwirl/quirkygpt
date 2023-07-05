@@ -3,7 +3,7 @@ export interface OpenAIStreamPayload {
   messages: any[];
 }
 
-export async function OpenAIStream(payload: OpenAIStreamPayload) {
+export async function* OpenAIStream(payload: OpenAIStreamPayload) {
   const res = await fetch("https://api.openai.com/v1/chat/completions", {
     headers: {
       "Content-Type": "application/json",
@@ -16,10 +16,14 @@ export async function OpenAIStream(payload: OpenAIStreamPayload) {
   const stream = await res.json();
 
   try {
+    const content = stream?.choices[0]?.message?.content || '';
+    const words = content.split(' ');
 
-    return stream?.choices[0]?.message?.content || ''
+    for (const word of words) {
+      yield word;
+    }
 
   } catch (e) {
-      return e
+    return e;
   }
 }
